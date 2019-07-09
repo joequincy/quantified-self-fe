@@ -1,1 +1,42 @@
+.modalForm {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2)
+}
 
+.modalForm section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -80px;
+  width: 400px;
+  height: 160px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 1px #333333;
+  background-color: #FFFFFF;
+}
+
+.hidden, .meal ul:empty, .meal ul:empty::before {
+  display: none!important;
+}
+
+.meal .name {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.meal ul::before {
+  content: 'Food';
+  font-size: 16pt;
+}
+
+.meal li {
+  font-size: 12pt;
+}
