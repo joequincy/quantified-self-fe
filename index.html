@@ -9,6 +9,7 @@
   <section id="additions">
     <a id="showAddMealButton"><button class="default-button">Create New Meal</button></a>
     <a id="showAddFoodButton"><button class="default-button">Create New Food</button></a>
+    <a id="deleteFoodButton"><button class="default-button">Delete a Food</button></a>
   </section>
 
   <section id="diary">
@@ -58,6 +59,16 @@
         <h3>Add Food to </h3>
         <label for="foodId">Food</label><select name="foodId" id="foodSelect"></select>
         <input type="hidden" name="mealId">
+        <input type="submit">
+      </section>
+    </form>
+  </template>
+
+  <template id="deleteFoodFormTemplate">
+    <form id="deleteFoodForm" class="modalForm">
+      <section>
+        <h3>Delete Food</h3>
+        <label for="foodId">Food</label><select name="foodId" id="foodSelect"></select>
         <input type="submit">
       </section>
     </form>
