@@ -3,12 +3,76 @@
 <head>
   <meta charset="utf-8">
   <title>Quantified Self - Diary</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-      <a href="foods.html"><button class="default-button">Create New</button></a>
-    <script
-    src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
-  </script>
+  <section id="additions">
+    <a id="showAddMealButton"><button class="default-button">Create New Meal</button></a>
+    <a id="showAddFoodButton"><button class="default-button">Create New Food</button></a>
+    <a id="deleteFoodButton"><button class="default-button">Delete a Food</button></a>
+  </section>
+
+  <section id="diary">
+  </section>
+
+  <template id="mealTemplate">
+    <article class="meal">
+      <span class="name"></span>
+      <ul></ul>
+      <a class="showAddFoodToMealButton"><button class="default-button">Add a Food</button></a>
+      <a class="deleteMealButton"><button class="default-button">Delete</button></a>
+    </article>
+  </template>
+
+  <template id="foodTemplate">
+    <li class="food">
+      <span class="name"></span>:
+      <span class="calories"></span>
+      <a class="removeFoodFromMealButton"><button class="default-button">Remove</button></a>
+    </li>
+  </template>
+
+  <template id="addFoodFormTemplate">
+    <form id="addFoodForm" class="modalForm">
+      <section>
+        <h3>Add Food</h3>
+        <label for="name">Name: </label><input type="text" name="name" placeholder="Food Name" required>
+        <label for="calories">Calories: </label><input type="number" name="calories" placeholder="Calories" required>
+        <input type="submit">
+      </section>
+    </form>
+  </template>
+
+  <template id="addMealFormTemplate">
+    <form id="addMealForm" class="modalForm">
+      <section>
+        <h3>Add Meal</h3>
+        <label for="name">Name: </label><input type="text" name="name" placeholder="Meal Name" required>
+        <input type="submit">
+      </section>
+    </form>
+  </template>
+
+  <template id="addFoodToMealFormTemplate">
+    <form id="addFoodToMealForm" class="modalForm">
+      <section>
+        <h3>Add Food to </h3>
+        <label for="foodId">Food</label><select name="foodId" id="foodSelect"></select>
+        <input type="hidden" name="mealId">
+        <input type="submit">
+      </section>
+    </form>
+  </template>
+
+  <template id="deleteFoodFormTemplate">
+    <form id="deleteFoodForm" class="modalForm">
+      <section>
+        <h3>Delete Food</h3>
+        <label for="foodId">Food</label><select name="foodId" id="foodSelect"></select>
+        <input type="submit">
+      </section>
+    </form>
+  </template>
   <script src="main.bundle.js"></script>
 </body>
 </html>
