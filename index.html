@@ -6,22 +6,31 @@
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-  <section id="additions">
-    <a id="showAddMealButton"><button class="default-button">Create New Meal</button></a>
-    <a id="showAddFoodButton"><button class="default-button">Create New Food</button></a>
-    <a id="deleteFoodButton"><button class="default-button">Delete a Food</button></a>
+  <h1>Quantified Self</h1>
+  <section class="page-container">
+
+  <section class='additions-container'>
+    <section id="additions">
+      <a id="showAddMealButton"><button class="default-button">Create New Meal</button></a>
+      <a id="showAddFoodButton"><button class="default-button">Create New Food</button></a>
+      <a id="deleteFoodButton"><button class="default-button" >Delete a Food</button></a>
+    </section>
   </section>
 
   <section id="diary">
   </section>
 
   <template id="mealTemplate">
+    <section>
     <article class="meal">
       <span class="name"></span>
       <ul></ul>
-      <a class="showAddFoodToMealButton"><button class="default-button">Add a Food</button></a>
-      <a class="deleteMealButton"><button class="default-button">Delete</button></a>
+      <section class='meal-buttons'>
+        <a class="showAddFoodToMealButton"><button class="default-button">Add a Food</button></a>
+        <a class="deleteMealButton"><button class="default-button">Delete</button></a>
+      </section>
     </article>
+  </section>
   </template>
 
   <template id="foodTemplate">
@@ -73,6 +82,7 @@
       </section>
     </form>
   </template>
+</section>
   <script src="main.bundle.js"></script>
 </body>
 </html>
