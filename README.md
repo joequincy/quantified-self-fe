@@ -1,79 +1,15 @@
-# Quantified Self Front-end
+## Quantified Self Front-end
+Authored by: [Deonte Cooper](https://github.com/djc00p) and [Jon Peterson](https://github.com/joequincy)
 
-## Initial Setup
+A front-end for the [Quantified Self](https://github.com/joequincy/quantified-self-be) calorie tracker project. An existing repository with a pre-configured Webpack setup was provided, which utilizes out-of-date versions with security vulnerabilities. For the learning goals, scale, and timeframe of this project, those vulnerabilities are irrelevant and acceptable, however this repository should not be used as the base for any continued development.
 
-1. Clone this starter kit repository and rename the repository to `quantified-self-fe` in one command
+This project is a Mod 4 paired assignment from the Turing School of Software and Design. [Assignment details are available](https://github.com/turingschool/backend-curriculum-site/blob/66a39813572f453700ab944948ecf698b0b75d42/module4/projects/quantified_self/qs_server_side.md) in the [@turingschool](https://github.com/turingschool) curriculum repository.
 
-  ```shell
-  git clone git@github.com:turingschool-examples/qs-fe-starter-kit.git quantified-self-fe
-  ```
-2. Change into the `quantified-self-fe` directory
+### Setup
+- Clone down the [Quantified Self BE](https://github.com/joequincy/quantified-self-be) repo and follow its setup instructions, including starting the server.
+- Clone down this repository
+  - Run `npm install`
+  - Run `npm start`
+  - Visit `localhost:8080`
 
-3. Remove the default remote (origin)
-
-  ```shell
-  git remote rm origin
-  ```
-
-4. Create a new repository on GitHub named `quantified-self-fe`
-
-5. Add your new repository remote - **your remote URL and user name will be different in the command below**
-
-  ```shell
-  git remote add origin git@github.com:<YOUR GITHUB NAME>/quantified-self-fe.git
-  ```
-
-6. Install the dependencies of the starter kit
-
-  ```shell
-  npm install
-  ```
-
-7. Add, commit, and push up to your repository
-
-  ```shell
-  git add .
-  git commit -m "Initial commit using starter kit"
-  git push origin master
-  ```
-
-## Running the Server Locally
-
-To see your code in action locally, you need to fire up a development server. Use the command:
-
-```shell
-npm start
-```
-
-Once the server is running, visit in your browser:
-
-* `http://localhost:8080/` to run your application.
-
-You will need to make sure that your Quantified Self API is also running at `http://localhost:3000`
-
-## GitHub Pages Setup
-
-This site will be served from GitHub Pages in production.
-
-In order to see your application running on production:
-
-1. From the command line, run `npm run build`.
-
-2. Commit and push your application to GitHub.
-
-3. Visit your repository on Github
-
-4. Go to Settings
-
-5. Under the Github Pages section of Options, select 'master' as your source and click `Save`
-
-Be sure to `npm run build` and commit before each push to master. A few seconds after you push up, you should be able to see your application at <https://your-github-username.github.io/quantified-self-fe>.
-
-## Built With
-
-* [JavaScript](https://www.javascript.com/)
-* [jQuery](https://jquery.com/)
-* [Express](https://expressjs.com/)
-* [Mocha](https://mochajs.org/)
-* [Chai](https://chaijs.com/)
-
+A demo version is also available on [GitHub Pages](https://joequincy.github.io/quantified-self-fe), however there is a timing issue with the API encountered in production. When adding a new Food, the API successfully creates the database entry but does not return the created food. This causes the page to need a reload before the food will appear. As this bug was discovered at the end of the project timeframe, it will not be fixed.
