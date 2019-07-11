@@ -551,13 +551,7 @@
 
 	    this.diary = diary;
 	    this.self = this;
-	    this.apiHost = function (env) {
-	      if (env == 'production') {
-	        return 'https://quantified-self-be-raad.herokuapp.com/api/v1/';
-	      } else {
-	        return 'http://localhost:3000/api/v1/';
-	      }
-	    }(process.env.NODE_ENV);
+	    this.apiHost = 'https://quantified-self-be-raad.herokuapp.com/api/v1/';
 	  }
 
 	  _createClass(QSapp, [{
