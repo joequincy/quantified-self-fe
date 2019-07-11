@@ -476,7 +476,7 @@
 	      var _this3 = this;
 
 	      var clone = importTemplate('#mealTemplate');
-	      $(clone).attr('data-meal-id', meal.id);
+	      $('.meal', clone).attr('data-meal-id', meal.id);
 	      $('.name', clone).html(meal.name);
 	      var appendedElm = null;
 	      if (target) {
